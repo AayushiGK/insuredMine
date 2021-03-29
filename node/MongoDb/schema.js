@@ -10,14 +10,6 @@ module.exports = function () {
     dbconnect.on('err', console.error.bind(console, 'db Error'));
     mongoose.set('useFindAndModify', false);
 
-
-    // agent
-    // account_name 
-    // category_name
-    // company_name
-    // email	gender	firstname 	phone	address     state	zip     dob	    city     userType
-    // policy_mode	producer	policy_number	premium_amount	policy_type		policy_start_date	policy_end_date	    csr     account_type
-
     AgentSchema = mongoose.Schema({
         agent_name: {
             type: String,

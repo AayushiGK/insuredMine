@@ -24,7 +24,7 @@ function startApp(arrg) {
     app.use(statusMonitor);
     app.get('/status', statusMonitor.pageRoute);
 
-    
+
     app.use(cors());
     app.use(compression());
     app.use(express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 50000 }))
@@ -39,8 +39,6 @@ function startApp(arrg) {
 
     app.use("/", require("./Task_1")(arrg));
     app.use("/", require("./Task_2")(arrg));
-
-
 
     app.get('/*.*', function (req, res) {
         p = path.join(appRoot.toString(), '/dist', req.path.toString());

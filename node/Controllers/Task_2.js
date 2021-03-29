@@ -11,7 +11,7 @@ module.exports = function (arrg) {
     // 2 - Supposing Message Model-Schema with message fields.
     router.post("/scheduleMessage", (req, res, next) => {
         let { message, date, time } = req.body;
-        let date = new Date(date);
+        date = new Date(date);
         let rule = new schedule.RecurrenceRule();
         rule.year = date.getFullYear();
         rule.month = date.getMonth();
